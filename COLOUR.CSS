@@ -1,0 +1,124 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgba(255, 0, 0, 0.885);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 900px;
+    background: rgba(4, 251, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 220px;
+    height: auto;
+    border-radius: 25px;
+    object-fit: cover;
+    border: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Profile Name */
+.rainbow-text {
+    background: linear-gradient(45deg, #ff1d58, #f75990, #00DDFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgb(77, 60, 60);
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Details Section */
+.details-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.detail-box {
+    background: #0049B7;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.detail-box:hover {
+    background: #d52000d4;
+    transform: translateY(-5px);
+}
+
+/* About Section */
+.about-section {
+    background: #fff685;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 6px solid #ff1d58;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.section-title {
+    color: #0049B7;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Social Links */
+.social-links a {
+    color: #0049B7;
+    margin: 0 15px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff1d58;
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: auto;
+    }
+}
